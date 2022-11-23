@@ -264,12 +264,64 @@ Ent of Section 1
   height: 30vh;
   background-color: #222;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
   padding: 3rem 0;
   position: relative;
 }
-.copyright{
-  position: absolute;
-  bottom: 3rem;
+.section-4-text{
+  text-transform: uppercase;
 }
+.section-4-heading{
+  font-weight: 900;
+  color: #8f8317;
+  font-size: 3rem;
+}
+.section-4-paragraph{
+ 
+  color: #888;
+  font-size: 1.5rem;
+}
+.signup-form{
+  display: flex;
+  align-items: center;
+}
+.signup-form-input{
+     width: 35rem;
+     height: 5rem;
+     padding: 1rem;
+     border: 0.2rem solid #a79a2d;
+     font-size: 1.6rem;
+     font-weight: 700;
+     letter-spacing: 0.1rem;
+     color: #a79a2d;
+}
+.signup-form-input::placeholder{
+  color: #a79a2d;
+}
+.signup-form-btn{
+  position: relative;
+  left: -4.5rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #333;
+  color: #a79a2d;
+  border: none;
+  cursor: pointer;
+}
+.copyright{
+position: absolute; 
+  bottom: 3rem;
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: #eee;
+  letter-spacing: 0.1rem;
+  border-top: 0.1rem solid #888;
+  padding-top:6rem ;
+  text-align: center;
+  width: 100%;
+}
+
+
 /*End of Section 4*/
