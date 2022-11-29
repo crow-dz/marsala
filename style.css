@@ -9,12 +9,46 @@
   outline: none;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
+
 }
 /* convert  1rem=16px to 1rem=10px */
 html {
   font-size: 62.5%;
 }
 /*End of Common Styles*/
+/* Navbar */
+.navbar{
+  width: 100%;
+  height: 14rem;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+
+.navbar-link{
+  color: #aaa;
+  margin: 0 4rem;
+  display: flex;
+  flex-direction:column ;
+  align-items : center;
+}
+.navbar-link i{
+font-size: 7rem;  
+
+}
+.navbar-link span{
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  margin-top: 0.5rem;  
+  
+  }
+/* End of navbar */
 
 /*
 Section 1 
