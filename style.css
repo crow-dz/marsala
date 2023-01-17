@@ -180,7 +180,11 @@ Section 1
   width: 50vh;
   height: 50vh;
 }
-
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 /*
 Ent of Section 1 
 */
@@ -505,6 +509,8 @@ Ent of Section 1
     font-size: 40%;
 
   }
+
+  
  .section-heading-1{
   margin-bottom: 30rem;
  }
@@ -527,7 +533,10 @@ Ent of Section 1
     font-size: 30%;
 
   }
-
+  .section-1{
+    background-image: url("images/food-table-mobile.jpg");
+    object-fit: cover;
+  }
   .section-heading-1 {
 
     margin-top: 30rem;
@@ -583,6 +592,10 @@ Ent of Section 1
   html {
     font-size: 25%;
   }
+  .section-1{
+    background-image: url("images/food-table-mobile.jpg");
+    object-fit: cover;
+  }
 
   .menu {
     width: 6rem;
@@ -623,6 +636,13 @@ Ent of Section 1
     padding: 0 2rem 0 2rem;
   }
 
+}
+@media 
+(max-width:400px) {
+  .section-1{
+    background-image: url("images/food-table-mobile2.jpg");
+    object-fit: fill;
+  }
 }
 
 /*End of reponsive */
