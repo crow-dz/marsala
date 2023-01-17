@@ -11,10 +11,12 @@
   font-weight: 400;
 
 }
+
 /* convert  1rem=16px to 1rem=10px */
 html {
   font-size: 62.5%;
 }
+
 /*End of Common Styles*/
 /* Navbar */
 .navbar {
@@ -128,40 +130,62 @@ Section 1
   width: 100%;
   height: 100vh;
   background-color: #333;
+  background-image: url("images/food-table-desktop.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
-.section-heading{
+.section-heading-1 {
   font-size: 12rem;
   font-weight: 900;
   letter-spacing: 0.5rem;
   color: #fff;
-  text-shadow: 0.3rem 0.3rem 0.3rem  #000;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+  text-align: center;
+  padding-bottom: 50px;
+  text-transform: capitalize;
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+
+}
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
   text-align: center;
   text-transform: capitalize;
 
 }
+
 .section-1-icons i {
   font-size: 35rem;
   color: burlywood;
   position: absolute;
-  transform:  translate(-50%, -50%)scale(0);
-  text-shadow: 0.2rem 0.2rem   0.2rem #000;
-  transition:transform  0.3s;
+  transform: translate(-50%, -50%)scale(0);
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: transform 0.3s;
 }
-.section-1-icons i.change   {
-  transform:  translate(-50%, -50%)scale(1);
-  transition:transform 0.3s 0.3s;
+
+.section-1-icons i.change {
+  transform: translate(-50%, -50%)scale(1);
+  transition: transform 0.3s 0.3s;
+}
+
+.food-imgs {
+  width: 50vh;
+  height: 50vh;
 }
 
 /*
 Ent of Section 1 
 */
 /* Section 2 */
-.section-2{
+.section-2 {
   height: 100vh;
   width: 100%;
   background-color: #222;
@@ -171,12 +195,14 @@ Ent of Section 1
   padding: 10rem 0;
 
 }
-.card-container{
+
+.card-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.card{
+
+.card {
   width: 30rem;
   background-color: #a79a2d;
   padding: 4rem;
@@ -187,31 +213,34 @@ Ent of Section 1
   box-shadow: 1rem 1rem 1rem #000;
   position: relative;
   transform: rotateY(20deg) skewX(-2deg);
-  transition: transform 0.5s,box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
-.card:hover{
+
+.card:hover {
   transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
   box-shadow: 2rem 2rem 2rem #000;
 }
-.card::after{
+
+.card::after {
   content: '';
   height: 100%;
-  width:1rem;
+  width: 1rem;
   background-color: #8f8317;
-  position:absolute;
+  position: absolute;
   top: 0;
-  left:-1rem;
+  left: -1rem;
   transform: skewY(45deg);
   transform-origin: right;
   box-shadow: -0.1rem -0.1rem -0.1rem #000;
 
 }
-.card::before{
+
+.card::before {
   content: '';
-  height:1rem ;
-  width:100% ;
+  height: 1rem;
+  width: 100%;
   background-color: #8f8317;
-  position:absolute;
+  position: absolute;
   top: -1rem;
   left: 0;
   transform: skewX(45deg);
@@ -220,10 +249,12 @@ Ent of Section 1
 
 
 }
-.card-img{
+
+.card-img {
   width: 100%;
 }
-.card-name{
+
+.card-name {
   font-size: 3rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -232,7 +263,8 @@ Ent of Section 1
   margin: 2rem 0;
   text-shadow: 0.15rem 0.15rem 0.15rem #000;
 }
-.card-btn{
+
+.card-btn {
   width: 70%;
   background-color: #111;
   color: #888;
@@ -248,17 +280,19 @@ Ent of Section 1
 
 
 }
+
 /*End of Section 2 */
 
 /* Section 3 */
-.section-3{
+.section-3 {
   background-color: #333;
-  padding-top:5rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
 
 
 }
-.gallery{
+
+.gallery {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -266,70 +300,72 @@ Ent of Section 1
   margin-top: 10rem;
   margin-bottom: 10rem;
 
-  
+
 }
-.gallery-link{
+
+.gallery-link {
   position: relative;
   margin: 2rem 1rem;
 }
 
-.gallery-link::after{
+.gallery-link::after {
   content: "";
-  position:  absolute;
-  top:2vw;
+  position: absolute;
+  top: 2vw;
   left: 80%;
   width: 0.2rem;
   height: 0;
   background-color: #fff;
   transition: height 0.5s;
 }
-.gallery-link:hover:after{
-  height: 80% ;
+
+.gallery-link:hover:after {
+  height: 80%;
 }
-.gallery-link::before{
+
+.gallery-link::before {
   content: "";
-  position:  absolute;
-  top:30%;
-  left:2rem;
-  width:0;
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  width: 0;
   height: 0.2rem;
   background-color: #fff;
   transition: width 0.5s;
   z-index: 10;
 }
-.gallery-link:hover::before{
+
+.gallery-link:hover::before {
   width: 90%;
 }
 
-.food-img{
+.food-img {
   width: 50vh;
   height: 25vh;
   object-fit: cover;
   box-shadow: 0.3rem 0.3rem 0.1rem #e92929,
-   0.5rem 0.5rem 0.1rem  #a2e946
-   ,
-   0.7rem 0.7rem 0.1rem  #279ce9
-   ,
-   0.9rem 0.9rem 0.1rem  #e92999;
-   transition: all 0.5s;
+    0.5rem 0.5rem 0.1rem #a2e946,
+    0.7rem 0.7rem 0.1rem #279ce9,
+    0.9rem 0.9rem 0.1rem #e92999;
+  transition: all 0.5s;
 }
-.gallery-link:hover .food-img{
+
+.gallery-link:hover .food-img {
 
   box-shadow:
-  0.5rem 0.5rem 0.1rem #3773b8,
-  1rem 1rem 0.1rem #e92929,
-  1.5rem 1.5rem 0.1rem  #a2e946
-  ,
-  2rem 2rem 0.1rem  #279ce9
-  ,
-  2.5rem 2.5rem 0.1rem  #e92999;
+    0.5rem 0.5rem 0.1rem #3773b8,
+    1rem 1rem 0.1rem #e92929,
+    1.5rem 1.5rem 0.1rem #a2e946,
+    2rem 2rem 0.1rem #279ce9,
+    2.5rem 2.5rem 0.1rem #e92999;
   filter: blur(0.5rem);
   opacity: 0.5;
-  transform : scale(1.1);
+  transform: scale(1.1);
 }
-.food-name{
-  position:absolute;
-  top:3rem;
+
+.food-name {
+  position: absolute;
+  top: 3rem;
   left: 3rem;
   font-size: 2rem;
   font-weight: 700;
@@ -340,16 +376,18 @@ Ent of Section 1
   overflow: hidden;
   transition: width 0.3s;
 }
-.gallery-link:hover .food-name{
+
+.gallery-link:hover .food-name {
   width: 100%;
   transition: width 1.5s 0.5s;
 }
-.food-description{
+
+.food-description {
   position: absolute;
   bottom: 3vw;
   left: 2rem;
   width: 70%;
-  font-size:1.5rem ;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -358,15 +396,17 @@ Ent of Section 1
   visibility: hidden;
   transition: opacity 0.3s;
 }
-.gallery-link:hover .food-description{
+
+.gallery-link:hover .food-description {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.1s 0.5s;
 
 }
+
 /*End of Section 3 */
 /* Section 4 */
-.section-4{
+.section-4 {
   width: 100%;
   height: 30vh;
   background-color: #222;
@@ -377,39 +417,46 @@ Ent of Section 1
   justify-content: space-around;
   padding: 3rem 0;
 
- 
+
 }
-.section-4-text{
+
+.section-4-text {
   text-transform: uppercase;
 }
-.section-4-heading{
+
+.section-4-heading {
   font-weight: 900;
   color: #8f8317;
   font-size: 3rem;
 }
-.section-4-paragraph{
- 
+
+.section-4-paragraph {
+
   color: #888;
   font-size: 1.5rem;
 }
-.signup-form{
+
+.signup-form {
   display: flex;
   align-items: center;
 }
-.signup-form-input{
-     width: 35rem;
-     height: 5rem;
-     padding: 1rem;
-     border: 0.2rem solid #a79a2d;
-     font-size: 1.6rem;
-     font-weight: 700;
-     letter-spacing: 0.1rem;
-     color: #a79a2d;
-}
-.signup-form-input::placeholder{
+
+.signup-form-input {
+  width: 35rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 0.2rem solid #a79a2d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
   color: #a79a2d;
 }
-.signup-form-btn{
+
+.signup-form-input::placeholder {
+  color: #a79a2d;
+}
+
+.signup-form-btn {
   position: relative;
   left: -4.5rem;
   width: 4rem;
@@ -419,15 +466,16 @@ Ent of Section 1
   border: none;
   cursor: pointer;
 }
-.copyright{
-position: absolute; 
+
+.copyright {
+  position: absolute;
   bottom: 3rem;
   font-size: 1.7rem;
   font-weight: 200;
   color: #eee;
   letter-spacing: 0.1rem;
   border-top: 0.1rem solid #888;
-  padding-top:6rem ;
+  padding-top: 6rem;
   text-align: center;
   width: 100%;
 }
@@ -437,25 +485,30 @@ position: absolute;
 
 /* Responsive */
 @media (max-width: 1400px) {
-html{
-  font-size: 50%;
-  
-}
-.card-container{
-  margin-top: 10rem;
+  html {
+    font-size: 50%;
 
-}
-.section-2{
-  height: auto;
-}
+  }
+
+  .card-container {
+    margin-top: 10rem;
+
+  }
+
+  .section-2 {
+    height: auto;
+  }
 }
 
 @media (max-width: 1000px) {
-  html{
+  html {
     font-size: 40%;
-    
+
   }
-  .gallery{
+ .section-heading-1{
+  margin-bottom: 30rem;
+ }
+  .gallery {
     margin-top: 5rem;
     margin-bottom: 5rem;
   }
@@ -463,64 +516,78 @@ html{
   .gallery-link {
 
     margin-bottom: 3rem;
-}
+  }
 
 }
 
-@media (max-width: 900px) {
-
-
-}
+@media (max-width: 900px) {}
 
 @media (max-width: 700px) {
-  html{
+  html {
     font-size: 30%;
-    
+
   }
-  .section-4{
+
+  .section-heading-1 {
+
+    margin-top: 30rem;
+    margin-bottom: 40rem;
+
+  }
+
+  .section-4 {
     flex-direction: column;
     align-items: center;
   }
- .section-4-heading{
-  font-size: 5rem;
- }
- .section-4-paragraph{
-  font-size: 3rem;
- }
- .signup-form-input{
-  width: 64rem;
-  height: 8rem;
-  font-size:3rem;
- }
- .signup-form-btn {
 
-  left: -7.8rem;
-  width: 7rem;
-  height: 7rem;
-  background-color: #333;
-  color: #a79a2d;
-  border: none;
-  cursor: pointer;
-}
-.section-4-text {
+  .section-4-heading {
+    font-size: 5rem;
+  }
 
-  text-align: center;
-}
- .copyright{
-  font-size: 4rem;
- }
- .signup-form{
-  margin-bottom: 15rem;
- }
+  .section-4-paragraph {
+    font-size: 3rem;
+  }
+
+  .signup-form-input {
+    width: 64rem;
+    height: 8rem;
+    font-size: 3rem;
+  }
+
+  .signup-form-btn {
+
+    left: -7.8rem;
+    width: 7rem;
+    height: 7rem;
+    background-color: #333;
+    color: #a79a2d;
+    border: none;
+    cursor: pointer;
+  }
+
+  .section-4-text {
+
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 4rem;
+  }
+
+  .signup-form {
+    margin-bottom: 15rem;
+  }
 }
 
 @media (max-width: 550px) {
-  html{
+  html {
     font-size: 25%;
   }
+
   .menu {
     width: 6rem;
-    height: 8rem;}
+    height: 8rem;
+  }
 
   .card-container {
 
@@ -528,24 +595,34 @@ html{
     align-items: center;
     justify-content: space-between;
 
- 
-}
-.card{
-  width: 60rem;
-  margin-bottom:5rem;
-}
-.card-btn{
-  width: 80%;
-  font-size: 3rem;
-}
-.food-img{
-  width: 40vh;
+
+  }
+
+  .food-imgs {
+    width: 40vh;
+    height: 40vh;
+  }
+
+  .card {
+    width: 60rem;
+    margin-bottom: 5rem;
+  }
+
+  .card-btn {
+    width: 80%;
+    font-size: 3rem;
+  }
+
+  .food-img {
+    width: 40vh;
     height: 20vh;
-}
-.section-heading {
-  font-size: 10rem;
-  padding: 0 2rem 0 2rem;
-}
+  }
+
+  .section-heading {
+    font-size: 10rem;
+    padding: 0 2rem 0 2rem;
+  }
 
 }
+
 /*End of reponsive */
