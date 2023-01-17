@@ -22,12 +22,13 @@ html {
   height: 14rem;
   background-color: #000;
   position: fixed;
-  top: 0;
+  top:-14rem;
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: top 0.4s;
 }
 
 .navbar-link{
@@ -36,6 +37,61 @@ html {
   display: flex;
   flex-direction:column ;
   align-items : center;
+  opacity: 0;
+  transition: color 0.3s , opacity 0.3;
+}
+.navbar-link:hover{
+  color: #eee;
+}
+.changeit .navbar-link{
+  opacity: 1;
+}
+.changeit .navbar-link:nth-child(1){
+  transition: opacity 0.4s 0.5s, color 0.3s ;
+}
+.changeit .navbar-link:nth-child(2){
+  transition: opacity 0.4s 0.6s, color 0.3s;
+}
+.changeit .navbar-link:nth-child(3){
+  transition: opacity 0.4s 0.7s, color 0.3s;
+}
+.changeit .navbar-link:nth-child(4){
+  transition: opacity 0.4s 0.8s, color 0.3s;
+}
+.changeit .navbar-link:nth-child(5){
+  transition: opacity 0.4s 0.9s, color 0.3s;
+}
+.menu{
+  width:4rem;
+  height: 6rem;
+  background-color: #000;
+  position: fixed;
+  top: 1rem;
+  left: 5rem;
+ border-radius:30rem 30rem 15rem 15rem ;
+ box-shadow: 0.1rem 0.1rem 0.1rem #000  -0.1rem -0.1rem 0.1rem #000;
+ cursor: pointer;
+ transition: top 0.4s 0.2s;
+ z-index: 1;
+}
+.menu::before{
+  content: '';
+  height:16rem;
+  width: 0.3rem;
+  background-color: #000;
+  position: absolute;
+  bottom: 5rem;
+  left: calc(50% - 0.15rem);
+  box-shadow: 0.1rem 0 0.1rem #000;
+}
+.menu.changeit{
+  top: 15rem;
+  transition: top 0.4s ;
+}
+.navbar.changeit{
+  top: 0rem;
+  transition: top 0.4s 0.2s ;
+
 }
 .navbar-link i{
 font-size: 7rem;  
@@ -93,7 +149,7 @@ Ent of Section 1
 .section-2{
   height: 100vh;
   width: 100%;
-  background-color: #333;
+  background-color: #222;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -170,6 +226,7 @@ Ent of Section 1
   font-weight: 800;
   letter-spacing: 0.2rem;
   text-transform: capitalize;
+  padding: 0.5rem 0;
   border: none;
   cursor: pointer;
   box-shadow: -.2rem -.2rem .2rem #000;
@@ -180,14 +237,21 @@ Ent of Section 1
 
 /* Section 3 */
 .section-3{
-  height: 100vh;
-  width: 100%;
   background-color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10rem 0;
+  padding-top:5rem;
+  padding-bottom: 5rem;
 
+
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  
 }
 .gallery-link{
   position: relative;
@@ -221,13 +285,7 @@ Ent of Section 1
 .gallery-link:hover::before{
   width: 90%;
 }
-.gallery{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 10rem;
-}
+
 .food-img{
   width: 50vh;
   height: 25vh;
@@ -299,10 +357,12 @@ Ent of Section 1
   background-color: #222;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  position: relative;
+  align-items: flex-start;
   justify-content: space-around;
   padding: 3rem 0;
-  position: relative;
+
+ 
 }
 .section-4-text{
   text-transform: uppercase;
@@ -359,3 +419,118 @@ position: absolute;
 
 
 /*End of Section 4*/
+
+/* Responsive */
+@media (max-width: 1400px) {
+html{
+  font-size: 50%;
+  
+}
+.card-container{
+  margin-top: 10rem;
+
+}
+.section-2{
+  height: auto;
+}
+}
+
+@media (max-width: 1000px) {
+  html{
+    font-size: 40%;
+    
+  }
+  .gallery{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .gallery-link {
+
+    margin-bottom: 3rem;
+}
+
+}
+
+@media (max-width: 900px) {
+
+
+}
+
+@media (max-width: 700px) {
+  html{
+    font-size: 30%;
+    
+  }
+  .section-4{
+    flex-direction: column;
+    align-items: center;
+  }
+ .section-4-heading{
+  font-size: 5rem;
+ }
+ .section-4-paragraph{
+  font-size: 3rem;
+ }
+ .signup-form-input{
+  width: 64rem;
+  height: 8rem;
+  font-size:3rem;
+ }
+ .signup-form-btn {
+
+  left: -7.8rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: #333;
+  color: #a79a2d;
+  border: none;
+  cursor: pointer;
+}
+.section-4-text {
+
+  text-align: center;
+}
+ .copyright{
+  font-size: 4rem;
+ }
+ .signup-form{
+  margin-bottom: 15rem;
+ }
+}
+
+@media (max-width: 550px) {
+  html{
+    font-size: 25%;
+  }
+  .menu {
+    width: 6rem;
+    height: 8rem;}
+
+  .card-container {
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+  /*  justify-content: space-evenly;*/
+}
+.card{
+  width: 60rem;
+  margin-bottom:5rem;
+}
+.card-btn{
+  width: 80%;
+  font-size: 3rem;
+}
+.food-img{
+  width: 40vh;
+    height: 20vh;
+}
+.section-heading {
+  font-size: 10rem;
+  padding: 0 2rem 0 2rem;
+}
+
+}
+/*End of reponsive */
